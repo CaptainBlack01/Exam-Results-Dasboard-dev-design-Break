@@ -1,0 +1,81 @@
+/* Exam Results Dashboard - Design System
+   Brand: Academic slate/indigo on light clean surfaces
+*/
+:root {
+  /* Brand */
+  --ds-brand-primary: #2563eb;
+  --ds-brand-primary-hover: #1d4ed8;
+  --ds-brand-secondary: #64748b;
+  --ds-brand-accent: #f59e0b;
+
+  /* Surfaces */
+  --ds-bg-body: #fff;
+  --ds-bg-surface: #f8fafc;
+  --ds-bg-card: #fff;
+  --ds-bg-input: #fff;
+  --ds-bg-hover: #f1f5f9;
+  --ds-bg-active: #e2e8f0;
+
+  /* Text */
+  --ds-text-primary: #0f172a;
+  --ds-text-secondary: #475569;
+  --ds-text-muted: #94a3b8;
+  --ds-text-inverse: #fff;
+  --ds-text-link: #2563eb;
+
+  /* Borders & Dividers */
+  --ds-border: #e2e8f0;
+  --ds-border-focus: var(--ds-brand-primary);
+  --ds-divider: #e2e8f0;
+
+  /* States */
+  --ds-success: #059669;
+  --ds-warning: #d97706;
+  --ds-error: #dc2626;
+  --ds-info: #2563eb;
+
+  /* Shadows */
+  --ds-shadow-sm: 0 1px 2px rgb(0 0 0 / 5%);
+  --ds-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%);
+  --ds-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 10%);
+
+  /* Radius */
+  --ds-radius-sm: 6px;
+  --ds-radius-md: 10px;
+  --ds-radius-lg: 16px;
+  --ds-radius-full: 9999px;
+
+  /* Spacing */
+  --ds-space-xs: 0.25rem;
+  --ds-space-sm: 0.5rem;
+  --ds-space-md: 1rem;
+  --ds-space-lg: 1.5rem;
+  --ds-space-xl: 2rem;
+  --ds-space-2xl: 3rem;
+
+  /* Transitions */
+  --ds-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --ds-z-dropdown: 100;
+  --ds-z-sticky: 200;
+  --ds-z-modal: 1000;
+  --ds-z-tooltip: 1100;
+
+  /* Typography */
+  --ds-font-sans:
+    'Inter', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
+  --ds-font-mono: ui-monospace, sfmono-regular, menlo, monospace;
+  --ds-text-xs: 0.75rem;
+  --ds-text-sm: 0.875rem;
+  --ds-text-base: 1rem;
+  --ds-text-lg: 1.125rem;
+  --ds-text-xl: 1.25rem;
+  --ds-text-2xl: 1.5rem;
+  --ds-text-3xl: 1.875rem;
+  --ds-line-height-tight: 1.25;
+  --ds-line-height-normal: 1.5;
+  --ds-line-height-relaxed: 1.75;
+}

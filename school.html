@@ -1,147 +1,183 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exam Results Dashboard</title>
-    <link rel="stylesheet" href="school.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <div class="exam-dashboard">
-        <!-- sidebar -->
-         <div class="sidebar">
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#">
+    <link rel="stylesheet" href="design-system.css" />
+    <link rel="stylesheet" href="school.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="exam-dashboard" role="main" aria-label="Exam Results Dashboard">
+      <!-- sidebar -->
+      <nav class="sidebar" aria-label="Main navigation">
+        <ul>
+          <li>
+            <a href="#" aria-label="Dashboard"
+              ><i class="fa-solid fa-house"></i><span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="#" aria-label="Results"
+              ><i class="fa-solid fa-file-alt"></i><span>Results</span></a
+            >
+          </li>
+          <li>
+            <a href="#" aria-label="Reports"
+              ><i class="fa-solid fa-chart-bar"></i><span>Reports</span></a
+            >
+          </li>
+          <li>
+            <a href="#" aria-label="Profile"
+              ><i class="fa-solid fa-user"></i><span>Profile</span></a
+            >
+          </li>
+          <li>
+            <a href="#" aria-label="Settings"
+              ><i class="fa-solid fa-cog"></i><span>Settings</span></a
+            >
+          </li>
+        </ul>
+      </nav>
 
-                </a></li>
-                <li><a href="#">
+      <main id="main-content">
+        <section class="top">
+          <h1>NEO Result Dashboard</h1>
+          <div class="note-avatar" aria-label="Notifications">
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+        </section>
 
-                </a></li>
-                <li><a href="#">
+        <section class="details">
+          <div class="name-avatar">
+            <div class="avatar">
+              <img
+                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=60"
+                alt="Student avatar"
+                width="80"
+                height="80"
+              />
+            </div>
+            <div class="name">
+              <h2>Ibrahim Musa</h2>
+              <p>Grade 12 - Science</p>
+            </div>
+          </div>
 
-                </a></li>
-                <li><a href="#">
-                    
-                </a></li>
-            </ul>
-            <ul>
-                <li><a href="#"></a></li>
-            </ul>
-         </div>
-         <!-- main -->
-          <main>
-            <section class="top">
-                <h1>NEO Result Dashboard</h1>
-                <div class="note-avatar">
-                    <i></i>
-                    <i></i>
-                </div>
-            </section>
-            <!-- details -->
-            <section class="details">
-                <div class="name-avatar">
-                    <div class="avatar">
-                        <img src="" alt="">
-                    </div>
-                    <div class="name">
-                        <h2>Ibrahim Musa</h2>
-                        <p>Grade 12 - Science</p>
-                    </div>
-                </div>
-                <!-- term and download -->
-                 <div class="term-download">
-                    <select name="term" id="term">
-                        <option value="1st-term">1st Term</option>
-                        <option value="2nd-term">2nd Term</option>
-                        <option value="3rd-term">3rd-term</option>
-                    </select>
-                    <div class="buttons">
-                        <button class="download">Download</button>
-                        <button class="print">Print</button>
-                    </div>
-                 </div>
-            </section>
-            <!-- table -->
-             <section class="table">
-             <table>
-                <thead>
-                    <tr>
-                        <th>Subject</th>
-                        <th>CA</th>
-                        <th>Exam</th>
-                        <th>Total</th>
-                        <th>Grade</th>
-                        <th>Remark</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>English</td>
-                        <td>28</td>
-                        <td>41</td>
-                        <td>69</td>
-                        <td>B</td>
-                        <td>Very Good</td>
-                    </tr>
+          <div class="term-download">
+            <label for="term" class="visually-hidden">Select term</label>
+            <select name="term" id="term" aria-label="Select term">
+              <option value="1st-term">1st Term</option>
+              <option value="2nd-term">2nd Term</option>
+              <option value="3rd-term">3rd Term</option>
+            </select>
+            <div class="buttons">
+              <button
+                type="button"
+                class="download"
+                id="downloadResults"
+                aria-label="Download results as CSV"
+              >
+                Download
+              </button>
+              <button type="button" class="print" id="printResults" aria-label="Print results">
+                Print
+              </button>
+            </div>
+          </div>
+        </section>
 
-                    <tr>
-                        <td>Mathematics</td>
-                        <td>28</td>
-                        <td>30</td>
-                        <td>58</td>
-                        <td>C</td>
-                        <td>Credit</td>
-                    </tr>
+        <section class="table">
+          <table aria-label="Exam results table">
+            <caption class="visually-hidden">
+              Student exam results by subject
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Subject</th>
+                <th scope="col">CA</th>
+                <th scope="col">Exam</th>
+                <th scope="col">Total</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Remark</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody">
+              <tr data-subject="English">
+                <td>English</td>
+                <td>28</td>
+                <td>41</td>
+                <td>69</td>
+                <td>B</td>
+                <td>Very Good</td>
+              </tr>
 
-                    <tr>
-                        <td>Physics</td>
-                        <td>29</td>
-                        <td>38</td>
-                        <td>67</td>
-                        <td>B</td>
-                        <td>Very Good</td>
-                    </tr>
+              <tr data-subject="Mathematics">
+                <td>Mathematics</td>
+                <td>28</td>
+                <td>30</td>
+                <td>58</td>
+                <td>C</td>
+                <td>Credit</td>
+              </tr>
 
-                    <tr>
-                        <td>Chemistry</td>
-                        <td>30</td>
-                        <td>33</td>
-                        <td>63</td>
-                        <td>B</td>
-                        <td>Very Good</td>
-                    </tr>
+              <tr data-subject="Physics">
+                <td>Physics</td>
+                <td>29</td>
+                <td>38</td>
+                <td>67</td>
+                <td>B</td>
+                <td>Very Good</td>
+              </tr>
 
-                    <tr>
-                        <td>Economics</td>
-                        <td>28</td>
-                        <td>50</td>
-                        <td>78</td>
-                        <td>A</td>
-                        <td>Distinction</td>
-                    </tr>
+              <tr data-subject="Chemistry">
+                <td>Chemistry</td>
+                <td>30</td>
+                <td>33</td>
+                <td>63</td>
+                <td>B</td>
+                <td>Very Good</td>
+              </tr>
 
-                    <tr>
-                        <td>Civic Education</td>
-                        <td>28</td>
-                        <td>41</td>
-                        <td>69</td>
-                        <td>B</td>
-                        <td>Very Good</td>
-                    </tr>
-                    
-                    <tr class="total" style="font-weight: 500k;">
-                        <td>Performance</td>
-                        <td></td>
-                        <td></td>
-                        <td>Position</td>
-                        <td>1st</td>
-                    </tr>
+              <tr data-subject="Economics">
+                <td>Economics</td>
+                <td>28</td>
+                <td>50</td>
+                <td>78</td>
+                <td>A</td>
+                <td>Distinction</td>
+              </tr>
 
-                </tbody>
-             </table>
-             </section>
-          </main>
-</body>
+              <tr data-subject="Civic Education">
+                <td>Civic Education</td>
+                <td>28</td>
+                <td>41</td>
+                <td>69</td>
+                <td>B</td>
+                <td>Very Good</td>
+              </tr>
+
+              <tr class="total">
+                <td>Performance</td>
+                <td colspan="3" id="performanceTotal">Average: 67.3</td>
+                <td>Position</td>
+                <td id="performancePosition">1st</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="school.js"></script>
+  </body>
 </html>
